@@ -5,8 +5,8 @@
 flowchart TD
   A[infile as stdin for cmd1] --> B(cmd1);
   D(cmd2) --> C[outfile as stout for cmd2];
-  B -- stdout --> E[PIPE];
-  E -- stdin --> D(cmd2);
+  B -- stdout 1 --> E[PIPE];
+  E -- stdin 0 --> D(cmd2);
 ```
 
 This program takes the infile, outfile to redirect the STDIN (<), STDOUT (>) and 2 commands to pipe.
